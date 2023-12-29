@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Project.Presentation.MainPage"
+             xmlns:vm="clr-namespace:MAUI.Project.Presentation.ViewModel"
+             x:DataType="vm:MainPageViewModel">
+
+  <Grid RowDefinitions="*,400,100" RowSpacing="10" Margin="10">
+
+    <HorizontalStackLayout Grid.Row="0" Padding="10" VerticalOptions="Center" HorizontalOptions="Center">
+      <Label Text="Blog Pro" FontSize="90" FontFamily="Slight"/>
+    </HorizontalStackLayout>
+
+    <Grid Grid.Row="1" Padding="10">
+      <VerticalStackLayout VerticalOptions="Center" Spacing="10">
+        <Button Text="Afficher les posts" Command="{Binding GoToPostCommand}"/>
+        <Button Text="Se Connecter" Command="{Binding GoToLoginCommand}" BorderWidth="2" BorderColor="Black" FontAttributes="Bold" TextColor="Black" Background="Transparent"/>
+      </VerticalStackLayout>
+    </Grid>
+
+    <Grid Grid.Row="2">
+
+      <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Vous n'avez pas de compte?" FontSize="Caption" HorizontalOptions="Center"/>
+        <Button Text="S'inscrire" FontAttributes="Bold" TextColor="Orange" Background="Transparent" HorizontalOptions="Center"/>
+        <Label Text="Powered By Avanade" FontSize="Micro" HorizontalOptions="Center"/>
+      </VerticalStackLayout>
+
+    </Grid>
+
+  </Grid>
+
+</ContentPage>
